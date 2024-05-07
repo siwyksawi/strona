@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Nowości Filmowe</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+}
+header, main, footer {
+background: white;
+padding: 20px;
+margin: 10px auto;
+max-width: 800px;
+}
+h1, h2 {
+color: #333;
+}
+nav ul {
+list-style-type: none;
+padding: 0;
+}
+nav ul li {
+display: inline;
+margin-right: 10px;
+}
+nav ul li a {
+text-decoration: none;
+color: #333;
+}
+nav ul li a:hover {
+text-decoration: underline;
+}
+ul.movie-list {
+padding: 0;
+list-style-type: none;
+}
+ul.movie-list li {
+padding: 10px;
+border-bottom: 1px solid #ccc;
+}
+#clock {
+position: absolute;
+right: 10px;
+top: 10px;
+color: #333;
+font-size: 16px;
+}
+</style>
+<script>
+function updateClock() {
+const now = new Date();
+let hours = now.getHours().toString().padStart(2, '0');
+let minutes = now.getMinutes().toString().padStart(2, '0');
+let seconds = now.getSeconds().toString().padStart(2, '0');
+let day = now.getDate().toString().padStart(2, '0');
+let month = (now.getMonth() + 1).toString().padStart(2, '0');
+let year = now.getFullYear();
+document.getElementById('clock').textContent = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+}
+
+window.onload = function() {
+setInterval(updateClock, 1000);
+};
+</script>
+</head>
+<body>
+<div id="clock"></div>
+<header>
+<h1>Nowości Filmowe</h1>
+<nav>
+<ul>
+<li><a href="index.html">Strona Główna</a></li>
+<li><a href="recenzje.html">Recenzje</a></li>
+<li><a href="premiery.html">Nadchodzące Premiery</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h2>Odkryj najnowsze filmy!</h2>
+<ul class="movie-list">
+<li>
+<strong>"Szybcy i Wściekli 10"</strong> Dominic Toretto, mistrz kierownicy i patriarcha patchworkowej rodziny, musi stawić czoła nowemu przeciwnikowi – obłąkanemu i nieobliczalnemu Dantemu, który chce pomścić śmierć swojego ojca. Oto kolejna odsłona widowiskowej serii pełnej pościgów i wybuchów.
+
+</li>
+<li>
+<strong>"Kaskader"</strong> Kaskader to osoba, która jest dublerem odtwórcy roli i zastępuje on aktora w szczególnie niebezpiecznych scenach takich jak: wypadki samochodowe, bójki, upadki z dużych wysokości, palenie się, topienie, ewolucje konne, motocyklowe, itp.
+</li>
+
+<li>
+<strong>"Civil War"</strong> Przez pogrążone w krwawej wojnie domowej Stany Zjednoczone przedziera się grupa reporterów, by w Waszyngtonie przeprowadzić ostatni wywiad z prezydentem. Akcja filmu rozgrywa się w niedalekiej przyszłości, w ogarniętych chaosem wojny domowej Stanach Zjednoczonych.
+</li>
+
+<li>
+<strong>"Diuna: Część Druga"</strong> ukazuje imponującą podróż Paula Atrydy, który zawiera sojusz z Chani i Fremenami. Jednocześnie wkracza na wojenną ścieżkę, pałając żądzą zemsty na spiskowcach, którzy doprowadzili do upadku jego rodziny. Stając przed wyborem między miłością życia a losem znanego wszechświata, Paul pragnie zapobiec tragicznej przyszłości, którą tylko on potrafi przewidzieć.
+</li>
+
+</ul> 
+</main>
+<footer>
+<p> 2024 Strona o Filmach. </p>
+</footer>
+</body>
+</html>
